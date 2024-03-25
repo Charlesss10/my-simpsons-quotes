@@ -94,6 +94,7 @@ function App() {
               fontSize: '50px', fontWeight: 'bold', color: 'black',
               textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)'
             }}>Simpsons Quotes</h1>
+
             <img src="Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.png" alt="Icon" style={{ width: '70px', height: '70px', marginLeft: '10px' }} />
 
             {/* Search input & Search bar*/}
