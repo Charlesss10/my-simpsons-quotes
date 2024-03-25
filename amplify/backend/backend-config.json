@@ -88,5 +88,11 @@
         }
       ]
     }
+  },
+  "storage": {
+    "simpsonsQuotes": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
   }
 }

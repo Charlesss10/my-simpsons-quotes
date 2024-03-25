@@ -1,0 +1,10 @@
+{
+  "resourceName": "simpsonsQuotes",
+  "tableName": "simpsonsQuotes",
+  "partitionKey": {
+    "fieldName": "Quotes",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
