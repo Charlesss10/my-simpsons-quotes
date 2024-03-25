@@ -1,0 +1,25 @@
+{
+  "short_name": "Simpsons Quotes",
+  "name": "My Simpsons Quotes App",
+  "icons": [
+    {
+      "src": "Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

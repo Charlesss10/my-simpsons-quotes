@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "paths": {
+    "/simpsons": {
+      "name": "/simpsons",
+      "lambdaFunction": "fetchSimpsonsQuotes",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read"
+        ]
+      }
+    }
+  }
+}
