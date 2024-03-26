@@ -50,7 +50,10 @@ This is my first time ever creating a web application using React and AWS Amplif
 ## Folder Structure 
 I squeezed everything in one source file. I know that this is not the best practice!!
 ```
+- build
+  - index.html
 - src
   - App.js: Main routes of the application, Contains Constants and configurations, Contains Utility functions and libraries..
+  - App.css
 ```
 
