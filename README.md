@@ -1,11 +1,11 @@
 # Simpsons Quotes App
-This is my first time ever creating a web application using React and AWS Amplify. I'm excited to kick off this proje8ct.
+This is my first time ever creating a JavaScript web application using React and AWS Amplify. I'm very excited to kick off this proje8ct.
 
 ## App Url Test(Vercel):
 https://My-Simpsons-Quotes-App.vercel.app/
 
 ## Main App Url (AWS Amplify):
-
+https://start.d1n4pr6fbxn1j5.amplifyapp.com/
 
 ## Technologies Used
 [![Node.js](https://img.shields.io/badge/Node.js-%2343853D.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -32,8 +32,10 @@ https://My-Simpsons-Quotes-App.vercel.app/
 4. **Run the development server:**
 
     ```bash
-    npm run dev
-    ```
+   ? Enter a name for the environment start
+   Using default provider  awscloudformation
+   ? Select the authentication method you want to use: AWS profile
+   ```
 
 5. **Run the Application:**
 
@@ -48,12 +50,13 @@ https://My-Simpsons-Quotes-App.vercel.app/
 
 
 ## Folder Structure 
-I squeezed everything in one source file. I know that this is not the best practice!!
+I squeezed everything to fit in one source file. I know that this is not the best practice and it is a bad coding Style!!
 ```
 - build
   - index.html
 - src
   - App.js: Main routes of the application, Contains Constants and configurations, Contains Utility functions and libraries..
   - App.css
+- package.json
 ```
 
