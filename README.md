@@ -1,5 +1,5 @@
 # Simpsons Quotes App
-This is my first time ever creating a JavaScript web application using React and AWS Amplify. I'm very excited to kick off this proje8ct.
+This is my first time ever creating a JavaScript web application using React and AWS Amplify. I'm very excited to kick off this project.
 
 ## App Url Test(Vercel):
 https://My-Simpsons-Quotes-App.vercel.app/
