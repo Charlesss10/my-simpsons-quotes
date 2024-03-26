@@ -13,7 +13,7 @@ This is my first time ever creating a web application using React and AWS Amplif
 [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](https://vercel.com)
 [![AWS Amplify](https://img.shields.io/badge/AWS%20Amplify-%23FF9900.svg?logo=Amazon%20AWS&logoColor=white)](https://aws.amazon.com/amplify/)
 
-- **Styling**: JavaScript Inbuilt Library
+- **Styling**: JavaScript Inbuilt Library and some additional libraries from React
 
 ## Getting Started
 
