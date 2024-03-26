@@ -1,8 +1,11 @@
 # Simpsons Quotes App
 This is my first time ever creating a web application using React and AWS Amplify. I'm excited to kick off this project.
 
-## App Url (Vercel):
+## App Url Test(Vercel):
 [https://my-simpsons-quotes-app.vercel.app/]
+
+## Main App Url (AWS Amplify):
+
 
 ## Technologies Used
 [![Node.js](https://img.shields.io/badge/Node.js-%2343853D.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
