@@ -5,11 +5,7 @@
       "name": "/simpsons",
       "lambdaFunction": "fetchSimpsonsQuotes",
       "permissions": {
-        "setting": "private",
-        "auth": [
-          "create",
-          "read"
-        ]
+        "setting": "open"
       }
     }
   }

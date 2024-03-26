@@ -32,5 +32,41 @@
         "simpsons": {}
       }
     }
+  },
+  "start": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-simpsonsquoteamplify-start-161533-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423598178:role/amplify-simpsonsquoteamplify-start-161533-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423598178:role/amplify-simpsonsquoteamplify-start-161533-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-simpsonsquoteamplify-start-161533-deployment",
+      "UnauthRoleName": "amplify-simpsonsquoteamplify-start-161533-unauthRole",
+      "StackName": "amplify-simpsonsquoteamplify-start-161533",
+      "StackId": "arn:aws:cloudformation:eu-central-1:637423598178:stack/amplify-simpsonsquoteamplify-start-161533/b20f3bd0-eb83-11ee-af2f-06a7b2a87987",
+      "AmplifyAppId": "d1n4pr6fbxn1j5"
+    },
+    "categories": {
+      "auth": {
+        "simpsonsquoteamplify": {}
+      },
+      "function": {
+        "fetchSimpsonsQuotes": {
+          "deploymentBucketName": "amplify-simpsonsquoteamplify-start-161533-deployment",
+          "s3Key": "amplify-builds/fetchSimpsonsQuotes-6a57623632746a346f36-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1n4pr6fbxn1j5",
+          "type": "manual"
+        }
+      },
+      "api": {
+        "simpsons": {}
+      },
+      "storage": {
+        "simpsonsQuotes": {}
+      }
+    }
   }
 }
