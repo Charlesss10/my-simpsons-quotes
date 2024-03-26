@@ -26,20 +26,25 @@ This is my first time ever creating a web application using React and AWS Amplif
     ```
 
 2. **Simpson API Used**
-   [https://thesimpsonsquoteapi.glitch.me/quotes?count=20]
+   [https://thesimpsonsquoteapi.glitch.me/quotes?count=24]
+   24 Quotes max. Displayed
 
-3. **Run the development server:**
+4. **Run the development server:**
 
     ```bash
     npm run dev
     ```
 
-4. **Open the Application:**
+5. **Run the Application:**
 
     ```bash
+    npm build
     npm start
     ```
     Open [http://localhost:3000](http://localhost:3000) in your browser via node.js to see the application.
+
+6. **Database Management**
+   I wanted to implement a database to handle different users and login credentials but due to the duration of the project i could not. 
 
 
 ## Folder Structure 
