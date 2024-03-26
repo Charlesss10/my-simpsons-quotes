@@ -2,7 +2,7 @@
 This is my first time ever creating a web application using React and AWS Amplify. I'm excited to kick off this project.
 
 ## App Url Test(Vercel):
-[https://my-simpsons-quotes-app.vercel.app/]
+[https://My-Simpsons-Quotes-App.vercel.app/]
 
 ## Main App Url (AWS Amplify):
 
