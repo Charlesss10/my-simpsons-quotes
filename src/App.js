@@ -1,9 +1,12 @@
 // Importing necessary modules
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Button from '@mui/material/Button';
-import ShareIcon from '@mui/icons-material/Share';
 import axios from 'axios';
+import Header from './Components/Header'
+import Loading from './Components/Loading'
+import Search from './Components/Search'
+import Quote from './Components/Quote'
+import FullQuotePopup from './Components/FullQuotePopup'
 
 // Main App component
 function App() {
@@ -19,7 +22,7 @@ function App() {
     if (!quotes.length) { // Only fetch quotes if the quotes state is empty
       fetchQuotes();
     }
-  }, []);
+  }, [quotes])
 
   // Function to fetch quotes from API
   const fetchQuotes = async () => {
@@ -75,120 +78,56 @@ function App() {
     }
   };
 
-  // Render loading screen if quotes are being fetched
-  function LoadingScreen() {
-    return (
-      <div className="loading-container">
-        <div className="loading-spinner"></div>
-        <p className="loading-text"></p>
-      </div>
-    );
-  }
-
-
 
   return (
     <div>
       {loading ? ( // Render loading screen if quotes are being fetched
-        <LoadingScreen />
+        <Loading />
       ) : (
 
         <div>
           {/* Your existing JSX for rendering quotes */}
-          <div style={{
-            textAlign: 'center', position: 'absolute', width: '100%', top: '20px',
-            backgroundColor: 'white'
-          }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <a href="/" style={{ textDecoration: 'none', cursor: 'pointer' }}>
-                <img src="Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.png" alt="Icon" style={{ width: '70px', height: '70px', marginBottom: '-10px' }} />
-                <h1 style={{ fontSize: '50px', fontWeight: 'bold', color: 'black', textShadow: '2px 2px 5px rgba(0, 0, 0, 0.24)', margin: 0, marginBottom: '50px' }}>Simpsons Quotes</h1>
-              </a>
-            </div>
 
-            {/* Search input & Search bar*/}
-            {/*JSX for search input for Character*/}
-            <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}> {/* Container for search inputs */}
-              <div style={{ marginRight: '50px' }}> {/* Container for character search */}
-                <input
-                  type="text"
-                  value={searchTermCharacter}
-                  onChange={handleSearchChangeCharacter}
-                  placeholder="Search by Character"
-                  style={{
-                    border: 'none', outline: 'none', borderRadius: '20px', padding: '10px',
-                    fontSize: '13px', marginBottom: '-5px', width: '100%', maxWidth: '300px', backgroundColor: '#F5F5F5', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
-                  }}
-                />
-              </div>
-              <div> {/* Container for quote search */}
-                <input
-                  type="text"
-                  value={searchTermQuote}
-                  onChange={handleSearchChangeQuote}
-                  placeholder="Search by Quote"
-                  style={{
-                    border: 'none', outline: 'none', borderRadius: '20px', padding: '10px',
-                    fontSize: '13px', marginBottom: '-6px', width: '100%', maxWidth: '300px', backgroundColor: '#F5F5F5', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
-                  }}
-                />
-              </div>
-            </div>
+          <Header />
+          <Search
+            searchTermCharacter={searchTermCharacter}
+            searchTermQuote={searchTermQuote}
+            handleSearchChangeCharacter={handleSearchChangeCharacter}
+            handleSearchChangeQuote={handleSearchChangeQuote}
+          />
 
+          {/* Displaying Character Image, Quotes & Character Name */}
 
-            {/* Displaying Character Image, Quotes & Character Name */}
-
+          <div className='quotes-container'>
             {filteredQuotes.length === 0 && (
-              <div style={{ textAlign: 'center', fontSize: '18px', fontWeight: 'bold', color: 'red' }}>
+              <div style = {{textAlign: 'center'}} className='no-results'>
                 Oops! Search not found!
               </div>
             )}
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', justifyContent: 'center', padding: '20px' }}>
-              {filteredQuotes.map((quoteData, index) => (
-                <div key={index} style={{ backgroundColor: 'white', borderRadius: '20px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', overflow: 'hidden' }}>
-                  <p style={{ fontSize: '20px', lineHeight: '1.2', fontWeight: 'bold' }}>{quoteData.character}</p>
-                  <img src={quoteData.image} alt={quoteData.character} style={{ width: '30%', height: 'auto', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }} />
-                  <div style={{ padding: '10px' }}>
-                    <p style={{ marginBottom: '5px', fontSize: '14px', lineHeight: '1.2', maxHeight: '60px', overflow: 'hidden' }}
-                    >{quoteData.quote.length > 50 ? quoteData.quote.slice(0, 40) + '...' : quoteData.quote}</p>
+            {filteredQuotes.map((quoteData, index) => (
+              <Quote
+                key={index}
+                quoteData={quoteData}
+                handleViewFullQuote={handleViewFullQuote}
+                handleShareQuote={handleShareQuote}
+              />
 
-                    {/* Buttons for viewing full quote and sharing */}
-                    <Button style={{
-                      marginRight: '10px', fontSize: '9px', backgroundColor: 'white',
-                      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', color: 'black'
-                    }} onClick={() => handleViewFullQuote(quoteData)}>View Full Quote</Button>
-                    <Button style={{
-                      backgroundColor: 'white',
-                      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', color: 'black'
-                    }} onClick={() => handleShareQuote(quoteData)}
-                      startIcon={<ShareIcon style={{ fontSize: '16px' }} />}></Button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Modal for displaying full quote */}
-            {selectedQuote && (
-              <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 9999 }}>
-                <div style={{
-                  position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white',
-                  padding: '20px', borderRadius: '10px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'
-                }}>
-                  <p style={{ marginBottom: '5px', fontSize: '20px', }}>{selectedQuote.quote}</p>
-                  <p style={{ fontFamily: 'Arial', fontWeight: 'normal', fontSize: '15px', fontWeight: 'bold' }}>- {selectedQuote.character}</p>
-                  <Button style={{
-                    fontSize: '9px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-                    backgroundColor: 'white', color: 'black'
-                  }} onClick={handleCloseFullQuote}>Close</Button>
-                </div>
-              </div>
-            )}
+            ))}
           </div>
+
+          {/* Modal for displaying full quote */}
+          {selectedQuote && (
+            <FullQuotePopup
+              selectedQuote={selectedQuote}
+              handleCloseFullQuote={handleCloseFullQuote}
+            />
+          )}
+
         </div>
       )}
     </div>
-  );
+  )
 }
 
 export default App;

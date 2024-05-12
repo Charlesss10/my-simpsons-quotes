@@ -3,17 +3,17 @@
   "name": "My Simpsons Quotes App",
   "icons": [
     {
-      "src": "Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.ico",
+      "src": "Homer_Simpson.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.png",
+      "src": "Homer_Simpson.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Jonathan-Rey-Simpsons-Homer-Simpson-03-Beer.png",
+      "src": "Homer_Simpson.png",
       "type": "image/png",
       "sizes": "512x512"
     }
