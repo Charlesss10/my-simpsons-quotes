@@ -86,8 +86,10 @@ function App() {
         <Loading />
       ) : (
 
-        <div style = {{textAlign: 'center', position: 'absolute', width: '100%', top: '20px',
-        backgroundColor: 'white'}}>
+        <div style={{
+          textAlign: 'center', position: 'absolute', width: '100%', top: '20px',
+          backgroundColor: 'white'
+        }}>
           {/* Your existing JSX for rendering quotes */}
 
           <Header />
@@ -102,8 +104,10 @@ function App() {
 
           <div className='quotes-container'>
             {filteredQuotes.length === 0 && (
-              <div style = {{textAlign: 'center'}} className='no-results'>
+              <div style={{ textAlign: 'center' }} className='no-results'>
                 Oops! Search not found!
+                <br />
+                <img src="sad_icon.png" alt="Sad Icon" style={{ width: '30px', height: '30px' }} />
               </div>
             )}
 

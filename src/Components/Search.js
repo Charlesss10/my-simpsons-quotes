@@ -9,13 +9,14 @@ function Search({ searchTermCharacter, searchTermQuote, handleSearchChangeCharac
             <div>
                 <div>
                     <input
+                        id='Character Filter'
                         type="text"
                         value={searchTermCharacter}
                         onChange={handleSearchChangeCharacter}
                         placeholder="Filter by Character"
                         style={{
                             border: 'none', outline: 'none', borderRadius: '20px', padding: '10px', textAlign: 'center',
-                            fontSize: '13px', width: '50%', maxWidth: '300px', backgroundColor: '#F5F5F5', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', marginBottom: '20px'
+                            fontSize: '13px', width: '50%', maxWidth: '300px', backgroundColor: '#F5F5F5', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', marginBottom: '15px'
                         }}
                     />
                     <FontAwesomeIcon
@@ -30,13 +31,14 @@ function Search({ searchTermCharacter, searchTermQuote, handleSearchChangeCharac
 
                 <div>
                     <input
+                        id='Quote Filter'
                         type="text"
                         value={searchTermQuote}
                         onChange={handleSearchChangeQuote}
                         placeholder="Filter by Quote"
                         style={{
                             border: 'none', outline: 'none', borderRadius: '20px', padding: '10px', textAlign: 'center',
-                            fontSize: '13px', width: '50%', maxWidth: '300px', backgroundColor: '#F5F5F5', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
+                            fontSize: '13px', width: '50%', maxWidth: '300px', backgroundColor: '#F5F5F5', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', marginBottom: '15px'
                         }}
                     />
                     <FontAwesomeIcon

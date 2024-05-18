@@ -21,7 +21,7 @@ function Quote({ key, quoteData, handleViewFullQuote, handleShareQuote }) {
                     variation='link'
                     style={{
                         marginRight: '10px', fontSize: '9px', backgroundColor: 'transparent', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-                        color: 'black', width: 'auto', minWidth: '50px'
+                        color: 'black', width: 'auto', minWidth: '50px', minHeight: '40px'
                     }}
                     onClick={() => handleViewFullQuote(quoteData)}>
                     <FontAwesomeIcon icon={faEye}
@@ -33,10 +33,11 @@ function Quote({ key, quoteData, handleViewFullQuote, handleShareQuote }) {
                     id='Share Full Quote Icon'
                     style={{
                         marginRight: '10px', fontSize: '9px', backgroundColor: 'transparent', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-                        color: 'black', width: 'auto', minWidth: '50px'
+                        color: 'black', width: 'auto', minWidth: '50px', minHeight: '40px'
+
                     }}
                     onClick={() => handleShareQuote(quoteData)}
-                    startIcon={<ShareIcon style={{ fontSize: '16px' }} />}>
+                    startIcon={<ShareIcon style={{ fontSize: '16px', marginLeft: '5px' }} />}>
                 </Button>
             </div>
         </div>
