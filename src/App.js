@@ -46,6 +46,7 @@ function App() {
     setSearchTermQuote(event.target.value);
   };
 
+
   // Filter quotes based on search term for character and quote
   const filteredQuotes = quotes.filter((quoteData) =>
     quoteData.character.toLowerCase().includes(searchTermCharacter.toLowerCase()) &&
@@ -85,7 +86,8 @@ function App() {
         <Loading />
       ) : (
 
-        <div>
+        <div style = {{textAlign: 'center', position: 'absolute', width: '100%', top: '20px',
+        backgroundColor: 'white'}}>
           {/* Your existing JSX for rendering quotes */}
 
           <Header />
