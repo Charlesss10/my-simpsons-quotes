@@ -10,6 +10,14 @@
       "StackName": "amplify-simpsonsquotes-dev-225b9",
       "StackId": "arn:aws:cloudformation:eu-central-1:637423598178:stack/amplify-simpsonsquotes-dev-225b9/ae65e920-8953-11ef-b23d-02fc09cc0019",
       "AmplifyAppId": "dxvfwywx16mwt"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dxvfwywx16mwt",
+          "type": "manual"
+        }
+      }
     }
   }
 }
