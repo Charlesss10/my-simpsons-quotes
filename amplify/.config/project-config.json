@@ -1,5 +1,6 @@
 {
-  "projectName": "SimpsonsQuoteAmplify",
+  "whyContinueWithGen1": "Prefer not to answer",
+  "projectName": "simpsonsQuotes",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
