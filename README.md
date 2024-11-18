@@ -1,4 +1,4 @@
-# Simpsons Quotes App
+# my-simpsons-quotes
 This is my first time ever creating a JavaScript web application using React and AWS Amplify. I'm very excited to kick off this project.
 
 ## App Url (Vercel):
@@ -10,50 +10,24 @@ https://My-Simpsons-Quotes-App.vercel.app/
 [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](https://vercel.com)
 [![AWS Amplify](https://img.shields.io/badge/AWS%20Amplify-%23FF9900.svg?logo=Amazon%20AWS&logoColor=white)](https://aws.amazon.com/amplify/)
 
-- **Styling**: JavaScript Inbuilt Library and some additional libraries from React
+## Deploying the Website locally with local host
+- Run 'npm install' - To Install all dependencies
+- Run 'npm start' - To run the app locally on local host
 
-## Getting Started
+## AWS Amplify
+### Configuration
+- Search for ~/.aws/credentials - To view all AWS profile credentials present locally on your Pc
+- Search for ~/.aws/config - To view all AWS profile config present locally on your Pc
+- Run 'amplify configure' - To configure amplify on the react app with an existing AWS profile present locally on your Pc
 
-1. **Install dependencies:**
+### Initialization
+Run 'amplify init' - To initialize a new AWS Amplify project by setting up the necessary configuration files and linking your local environment to the Amplify backend
 
-    ```bash
-    cd My-Simpsons-Quotes-App
-    npm install -g @aws-amplify/cli
-    npx create-react-app my-simpsons-app
-    ```
+### Build
+Run 'amplify build' - To create the project build
 
-2. **Simpson API Used**
-   https://thesimpsonsquoteapi.glitch.me/quotes?count=24
-   24 Quotes max. Displayed
+### Deployment
+Run 'amplify publish' - To deploy the project on amplify
 
-4. **Run the development server:**
-
-    ```bash
-   ? Enter a name for the environment start
-   Using default provider  awscloudformation
-   ? Select the authentication method you want to use: AWS profile
-   ```
-
-5. **Run the Application:**
-
-    ```bash
-    npm build
-    npm start
-    ```
-    Open [http://localhost:3000](http://localhost:3000) in your browser via node.js to see the application.
-
-6. **Database Management**
-   I wanted to implement a database to handle different users and login credentials but due to the duration of the project i could not. 
-
-
-## Folder Structure 
-I squeezed everything to fit in one source file. I know that this is not the best practice and it is a bad coding Style!!
-```
-- build
-  - index.html
-- src
-  - App.js: Main routes of the application, Contains Constants and configurations, Contains Utility functions and libraries..
-  - App.css
-- package.json
-```
-
+## Quick Fix Option on JavaScript
+Consider adding the jsconfig.json file for useful quick fixes
